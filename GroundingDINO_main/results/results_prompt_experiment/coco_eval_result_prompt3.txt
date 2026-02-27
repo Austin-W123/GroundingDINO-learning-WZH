@@ -1,0 +1,44 @@
+===== COCO Detection Full Evaluation Report =====
+Prompt Version: prompt3 (Fine-grained Description)
+
+===== SEEN Categories (65 classes) 12 Metrics =====
+AP@[0.5:0.95] = 0.2856
+AP@0.5 = 0.345
+AP@0.75 = 0.3081
+AP_small = 0.1137
+AP_medium = 0.2811
+AP_large = 0.4956
+AR@1 = 0.3096
+AR@10 = 0.3572
+AR@100 = 0.3572
+AR_small = 0.1377
+AR_medium = 0.3329
+AR_large = 0.5709
+
+===== UNSEEN Categories (15 classes) 12 Metrics =====
+AP@[0.5:0.95] = 0.1661
+AP@0.5 = 0.2047
+AP@0.75 = 0.1774
+AP_small = 0.0455
+AP_medium = 0.1222
+AP_large = 0.2655
+AR@1 = 0.1856
+AR@10 = 0.2132
+AR@100 = 0.2132
+AR_small = 0.0469
+AR_medium = 0.1589
+AR_large = 0.3078
+
+===== Prompt Impact Analysis =====
+
+📌 Pure Class Name:
+   Average AP@[0.5:0.95] = 0.1409
+   Average AP@0.5 = 0.1727
+
+📌 Template Sentence:
+   Average AP@[0.5:0.95] = 0.1131
+   Average AP@0.5 = 0.1585
+
+📌 Fine-grained Description:
+   Average AP@[0.5:0.95] = 0.1661
+   Average AP@0.5 = 0.2047

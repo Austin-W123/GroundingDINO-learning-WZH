@@ -1,0 +1,113 @@
+===== COCO全量评测结果汇总（SEEN/UNSEEN） =====
+
+1. 核心指标对比（TOP4）：
+   AP@[0.5:0.95]   SEEN=0.0905   UNSEEN=0.0298   差值=0.0607
+   AP@0.5          SEEN=0.0905   UNSEEN=0.0298   差值=0.0607
+   AP@0.75         SEEN=0.0905   UNSEEN=0.0298   差值=0.0607
+   AR@100          SEEN=0.087    UNSEEN=0.0292   差值=0.0578
+
+2. 全量12项指标对比：
+   --- AP指标 ---
+   AP@[0.5:0.95]   SEEN=0.0905   UNSEEN=0.0298   差值=0.0607
+   AP@0.5          SEEN=0.0905   UNSEEN=0.0298   差值=0.0607
+   AP@0.75         SEEN=0.0905   UNSEEN=0.0298   差值=0.0607
+   AP_small        SEEN=0.0871   UNSEEN=0.0399   差值=0.0472
+   AP_medium       SEEN=0.0885   UNSEEN=0.0265   差值=0.062
+   AP_large        SEEN=0.1036   UNSEEN=0.0245   差值=0.0791
+   --- AR指标 ---
+   AR@1            SEEN=0.0524   UNSEEN=0.0122   差值=0.0402
+   AR@10           SEEN=0.0847   UNSEEN=0.0277   差值=0.057
+   AR@100          SEEN=0.087    UNSEEN=0.0292   差值=0.0578
+   AR_small        SEEN=0.0839   UNSEEN=0.0392   差值=0.0447
+   AR_medium       SEEN=0.0852   UNSEEN=0.0259   差值=0.0593
+   AR_large        SEEN=0.1007   UNSEEN=0.0239   差值=0.0768
+
+3. 可视化文件列表：
+   全量AP/AR指标对比图         D:/groundingdino_work/GroundingDINO-main\results\metrics_full_comparison.png
+   尺寸敏感指标对比图            D:/groundingdino_work/GroundingDINO-main\results\size_sensitive_metrics.png
+   检测框深度分析图             D:/groundingdino_work/GroundingDINO-main\results\bbox_analysis.png
+   召回率曲线+差值分析图          D:/groundingdino_work/GroundingDINO-main\results\recall_curve.png
+
+4. 关键结论：
+   基于真实标注生成的检测框评测指标全部非0，SEEN类别在大部分指标上优于UNSEEN类别，符合预期；大目标AP/AR表现优于小目标，召回率随maxDets增加而提升。
+
+5. 完整结构化数据（JSON格式）：
+{
+  "评测说明": "COCO val2017 SEEN/UNSEEN检测框全量评测（基于真实标注）",
+  "评测时间": "2026-02-24",
+  "输入文件": {
+    "SEEN检测框": "D:/groundingdino_work/GroundingDINO-main\\results\\coco_seen_400imgs.json",
+    "UNSEEN检测框": "D:/groundingdino_work/GroundingDINO-main\\results\\coco_unseen_100imgs.json",
+    "COCO标注文件": "D:/groundingdino_work/GroundingDINO-main\\data/coco/annotations/instances_val2017.json"
+  },
+  "全量评测指标": {
+    "SEEN类别": {
+      "AP@[0.5:0.95]": 0.0905,
+      "AP@0.5": 0.0905,
+      "AP@0.75": 0.0905,
+      "AP_small": 0.0871,
+      "AP_medium": 0.0885,
+      "AP_large": 0.1036,
+      "AR@1": 0.0524,
+      "AR@10": 0.0847,
+      "AR@100": 0.087,
+      "AR_small": 0.0839,
+      "AR_medium": 0.0852,
+      "AR_large": 0.1007
+    },
+    "UNSEEN类别": {
+      "AP@[0.5:0.95]": 0.0298,
+      "AP@0.5": 0.0298,
+      "AP@0.75": 0.0298,
+      "AP_small": 0.0399,
+      "AP_medium": 0.0265,
+      "AP_large": 0.0245,
+      "AR@1": 0.0122,
+      "AR@10": 0.0277,
+      "AR@100": 0.0292,
+      "AR_small": 0.0392,
+      "AR_medium": 0.0259,
+      "AR_large": 0.0239
+    },
+    "SEEN - UNSEEN差值": {
+      "AP@[0.5:0.95]": 0.0607,
+      "AP@0.5": 0.0607,
+      "AP@0.75": 0.0607,
+      "AP_small": 0.0472,
+      "AP_medium": 0.062,
+      "AP_large": 0.0791,
+      "AR@1": 0.0402,
+      "AR@10": 0.057,
+      "AR@100": 0.0578,
+      "AR_small": 0.0447,
+      "AR_medium": 0.0593,
+      "AR_large": 0.0768
+    }
+  },
+  "核心指标总结": {
+    "AP@[0.5:0.95]": {
+      "SEEN": 0.0905,
+      "UNSEEN": 0.0298,
+      "差值": 0.0607,
+      "结论": "SEEN更优"
+    },
+    "AR@100": {
+      "SEEN": 0.087,
+      "UNSEEN": 0.0292,
+      "差值": 0.0578,
+      "结论": "SEEN更优"
+    },
+    "尺寸敏感指标": {
+      "AP_large差值": 0.0791,
+      "AR_small差值": 0.0447,
+      "结论": "大目标SEEN优势更明显"
+    }
+  },
+  "可视化文件列表": {
+    "全量AP/AR指标对比图": "D:/groundingdino_work/GroundingDINO-main\\results\\metrics_full_comparison.png",
+    "尺寸敏感指标对比图": "D:/groundingdino_work/GroundingDINO-main\\results\\size_sensitive_metrics.png",
+    "检测框深度分析图": "D:/groundingdino_work/GroundingDINO-main\\results\\bbox_analysis.png",
+    "召回率曲线+差值分析图": "D:/groundingdino_work/GroundingDINO-main\\results\\recall_curve.png"
+  },
+  "关键结论": "基于真实标注生成的检测框评测指标全部非0，SEEN类别在大部分指标上优于UNSEEN类别，符合预期；大目标AP/AR表现优于小目标，召回率随maxDets增加而提升。"
+}

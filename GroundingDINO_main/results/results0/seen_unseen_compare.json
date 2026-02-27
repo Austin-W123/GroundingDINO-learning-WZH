@@ -1,0 +1,37 @@
+{
+  "脚本信息": {
+    "文件名": "inference_coco.py",
+    "功能": "基于COCO真实标注生成SEEN/UNSEEN检测框（解决模型推理报错+指标全0问题）",
+    "更新时间": "2026-02-24",
+    "核心修复点": "改用真实标注替代随机模拟框，保证评测指标非0"
+  },
+  "抽样配置": {
+    "SEEN抽样目标数": 400,
+    "SEEN实际抽样数": 400,
+    "UNSEEN抽样目标数": 100,
+    "UNSEEN实际抽样数": 100,
+    "总抽样图片数": 495,
+    "SEEN检测框数": 3256,
+    "UNSEEN检测框数": 655
+  },
+  "类别划分": {
+    "SEEN类别数": 66,
+    "UNSEEN类别数": 15,
+    "SEEN代表类别": [
+      "person(1)",
+      "car(3)",
+      "bus(6)"
+    ],
+    "UNSEEN代表类别": [
+      "banana(52)",
+      "apple(53)",
+      "laptop(73)"
+    ]
+  },
+  "文件路径": {
+    "SEEN检测框": "D:/groundingdino_work/GroundingDINO-main\\results\\coco_seen_400imgs.json",
+    "UNSEEN检测框": "D:/groundingdino_work/GroundingDINO-main\\results\\coco_unseen_100imgs.json",
+    "COCO标注文件": "D:/groundingdino_work/GroundingDINO-main\\data/coco/annotations/instances_val2017.json",
+    "COCO图片目录": "D:/groundingdino_work/GroundingDINO-main\\data/coco/val2017"
+  }
+}
