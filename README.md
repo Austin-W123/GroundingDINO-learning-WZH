@@ -20,8 +20,8 @@
 
 ```bash
 # 克隆本仓库
-git clone [你的仓库地址]
-cd [仓库名]
+git clone https://github.com/Austin-W123/GroundingDINO-learning-WZH
+cd GroundingDINO-learning-WZH
 ```
 我的详细环境配置见：[my_environment](my_environment.txt)、[my_requirements](my_requirements.txt)
 ```bash
